@@ -5,5 +5,12 @@ name="Hoof Stomp"
 tooltip= "Don't hit Zecora"
 function use_ability()
 {
-	show_message("Don't hurt Zecora")
+	obj_battleUI.not_casting = false
+	var prompt = instance_create_depth(0,0,-1,obj_selectEnemy)
+	prompt.who_asked = id
+}
+
+function attack(enemy)
+{
+	enemy.hp-=10
 }

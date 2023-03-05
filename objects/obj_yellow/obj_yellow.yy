@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_partyMember",
+  "name": "obj_yellow",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "partyMembers",
-    "path": "folders/Objects/partyMembers.yy",
+    "name": "enemies",
+    "path": "folders/Objects/enemies.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_enemy",
+    "path": "objects/obj_enemy/obj_enemy.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_yellowEnemy",
+    "path": "sprites/spr_yellowEnemy/spr_yellowEnemy.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

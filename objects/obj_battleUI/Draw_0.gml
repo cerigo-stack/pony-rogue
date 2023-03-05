@@ -8,6 +8,7 @@ if (selected_char != noone)
 {
 	var text_c = c_black
 	var ability_c = c_fuchsia
+	draw_text_color(containerX+width-96,containerY+height/2,selected_char.hp,text_c,text_c,text_c,text_c,1)
 	draw_sprite_ext(selected_char.portait,0,containerX+64,containerY+16,2,2,0,c_white,1)
 	draw_text_colour(containerX+64+128/2,containerY+16+128+32,selected_char.name,text_c,text_c,text_c,text_c,1)
 	for (var i=0; i < selected_char.max_abilities;i++)

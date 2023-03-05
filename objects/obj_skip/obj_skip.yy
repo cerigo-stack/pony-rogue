@@ -1,19 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_partyMember",
+  "name": "obj_skip",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "partyMembers",
-    "path": "folders/Objects/partyMembers.yy",
+    "name": "abilities",
+    "path": "folders/Objects/abilities.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_ability",
+    "path": "objects/obj_ability/obj_ability.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_skip",
+    "path": "sprites/spr_skip/spr_skip.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
