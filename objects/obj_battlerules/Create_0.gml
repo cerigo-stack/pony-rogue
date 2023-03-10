@@ -3,24 +3,33 @@
 #macro MYTURN 1
 #macro ENEMYTURN 0
 
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+
 randomize()
 turn= MYTURN
 
-function check_casualties(turn)
+function battle_end()
 {
-	var type=turn? obj_enemy : obj_partyMember
-	with(type)
+	with(obj_enemy) alarm[0]=-1
+	if array_length(instance_number_alive(obj_partyMember)) == 0
 	{
-		//if hp<=0 instance_destroy()
+		show_message("YOU LOST")
+		return
 	}
+	show_message("YOU WON")
 }
+
+
 
 function check_turn_is_finished()
 {
-	check_casualties(turn)
 	var i = 0
 	var type=turn? obj_partyMember : obj_enemy
+	var other_type=!turn? obj_partyMember : obj_enemy
 	var alive_type=instance_number_alive(type)
+	var other_alive=instance_number_alive(other_type)
+	if  array_length(other_alive) == 0 or array_length(alive_type)== 0 return battle_end()
 	for (var k =0;k<array_length(alive_type);k++)
 	{
 		with(alive_type[k]) 

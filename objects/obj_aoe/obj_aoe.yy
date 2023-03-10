@@ -1,20 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_enemy",
+  "name": "obj_aoe",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "enemies",
-    "path": "folders/Objects/enemies.yy",
+    "name": "abilities",
+    "path": "folders/Objects/abilities.yy",
   },
   "parentObjectId": {
-    "name": "obj_combatant",
-    "path": "objects/obj_combatant/obj_combatant.yy",
+    "name": "obj_ability",
+    "path": "objects/obj_ability/obj_ability.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_aoe",
+    "path": "sprites/spr_aoe/spr_aoe.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

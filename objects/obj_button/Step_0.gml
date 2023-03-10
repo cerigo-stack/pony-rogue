@@ -2,5 +2,5 @@
 // You can write your code in this editor
 if (onclickme())
 {
-	room_goto(rm_battle)
+	room_goto(rm_dialog)
 }
