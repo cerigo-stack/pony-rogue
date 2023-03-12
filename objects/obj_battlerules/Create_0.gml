@@ -7,6 +7,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 
 randomize()
+current_caster=noone
 turn= MYTURN
 
 function battle_end()
@@ -56,11 +57,12 @@ function check_turn_is_finished()
 		}
 		else
 		{
+			current_caster=obj_battleUI.selected_char
 			with(obj_partyMember)
 			{
 				has_played=false
 			}
 		}
 	}
-	show_debug_message(i)
+	//show_debug_message(i)
 }

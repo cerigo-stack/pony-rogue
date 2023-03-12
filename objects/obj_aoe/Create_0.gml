@@ -2,8 +2,13 @@
 // You can write your code in this editor
 
 event_inherited()
- function use_ability()
+damage=10
+manacost=100
+function use_ability()
  {
-	with(obj_enemy){hp-=25}
-	ability_used()
+	if obj_battleRules.current_caster.mp>=manacost{
+		with(obj_enemy){hp-=other.damage}
+		obj_battleRules.current_caster.restore(0,-manacost)
+		ability_used()
+	}else generate_message("YOU HAVE NO MANA")
  }

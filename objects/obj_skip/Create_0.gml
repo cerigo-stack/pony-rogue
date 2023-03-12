@@ -3,4 +3,8 @@
 event_inherited()
 name="SKIP"
 tooltip= "Skips turn"
-function use_ability() {ability_used()}
+manacost=-700
+function use_ability() {
+	obj_battleRules.current_caster.restore(0,-manacost)
+	ability_used()
+}

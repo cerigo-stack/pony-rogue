@@ -15,6 +15,7 @@ function select_character(_id)
 {
 	if (not_casting){
 		selected_char=_id
+		if obj_battleRules.turn obj_battleRules.current_caster=selected_char
 		instance_destroy(obj_ability)
 		var skip=instance_create_depth(containerX+width/3,containerY+height/2,-1, obj_skip)
 		skip.mycharacter=selected_char

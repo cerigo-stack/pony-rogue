@@ -2,9 +2,11 @@
 // You can write your code in this editor
 function generate_message(text_input)
 {
-	instance_destroy(obj_textEnemyTurn)
-	var msg = instance_create_depth(0,0,-1,obj_textEnemyTurn)
-	msg.text=text_input
+	if obj_battleRules.turn {
+		instance_destroy(obj_textEnemyTurn)
+		var msg = instance_create_depth(0,0,-1,obj_textEnemyTurn)
+		msg.text=text_input
+	}
 }
 
 if object_get_parent(mycharacter.object_index) == obj_enemy
